@@ -1,0 +1,25 @@
+image: git.wowpage.ru:5555/elevel/legrand-24-site
+
+
+stages:
+  - deploy
+  
+.deploy_template: &deploy_tpl
+  stage: deploy
+  script:
+    - mkdir -p ~/.ssh
+
+
+deploy_develop:
+  <<: *deploy_tpl
+  environment:
+    name: legrand-24.wowpage.ru
+    url: https://legrand-24.wowpage.ru/
+  variables:
+    CI_DEPLOYMENT_HOST: bitrix.gorokhov.su
+    CI_DEPLOYMENT_USER: bitrix
+    CI_DEPLOYMENT_PATH: /home/bitrix/legrand-24.wowpage.ru/
+    CI_DEPLOYMENT_ENV: develop
+  only:
+    - master
+  when: on_success

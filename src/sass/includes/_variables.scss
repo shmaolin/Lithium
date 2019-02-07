@@ -1,0 +1,47 @@
+// fonts
+$Montserrat: 'Montserrat', sans-serif;
+$Roboto:'Roboto', sans-serif;
+// root
+$rootUrl: "images/";
+$rootUrlFonts: "../fonts/";
+
+// color
+
+// base reset
+$baseFontFamily:$Montserrat;
+$baseFontSize: 16px;
+$baseLineHeight: 1.5;
+$textColor: #36373c;
+$bodyBackground:#fff;
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+    //@return $pixels
+}
+
+@function rem($pixels, $context: $browser-context) {
+    //@if (unitless($pixels)) {
+    //    $pixels: $pixels * 1px;
+    //}
+    //
+    //@if (unitless($context)) {
+    //    $context: $context * 1px;
+    //}
+    //
+    //@return $pixels / $context * 1rem;
+    @return $pixels;
+}
+
+
+
+

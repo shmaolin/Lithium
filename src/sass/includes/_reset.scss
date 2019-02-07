@@ -1,0 +1,27 @@
+* {@include box-sizing(border-box);}
+
+&:after,
+&:before {
+  @include box-sizing(border-box);
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: $baseFontFamily;
+  font-weight: 400;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background: $bodyBackground;
+  min-width: 320px;
+  margin:auto;
+}
+
+.slick-slide {
+  outline: 0!important;
+}
+
+
