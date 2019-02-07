@@ -1,0 +1,104 @@
+.welcome {
+    min-height: 2000px;
+    background: linear-gradient(180deg, #4D4D4D 20.97%, #A5A5A5 54.13%, #FEFEFE 100%);
+}
+
+.welcome__cont {
+    .main-container {
+        position: relative;
+        min-height: rem(819px);
+    }
+}
+
+.welcome__cont-img {
+    background: url("#{$rootUrl}welcome-cont-img.png") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+    @include size(rem(1920px),rem(819px));
+    position: absolute;
+    left:50%;
+    top:rem(139px);
+    margin:0 0 0 rem(-960px);
+}
+
+.welcome__inner {
+    position: relative;
+    z-index:50;
+    padding: rem(233px) 0 0 rem(96px);
+}
+
+.welcome__title {
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: rem(56px);
+    color: #FFFFFF;
+    margin:0;
+}
+
+.welcome__cont-text {
+    max-width: rem(610px);
+    line-height: rem(27px);
+    font-size: rem(20px);
+    color: #FFFFFF;
+    margin: rem(28px) 0 0 rem(3px);
+
+    p {
+        margin:0 0 rem(10px);
+    }
+}
+
+.welcome__cont-btn-group {
+    margin: rem(33px) 0 0;
+
+    .btn-f,
+    .btn-r {
+        min-width:rem(220px);
+        margin-right:rem(31px);
+
+        &:last-child {
+            margin-right:0;
+        }
+    }
+
+    .btn-r {
+        color: #fff;
+    }
+}
+
+.welcome__cont-more {
+    position: absolute;
+    font-weight: 500;
+    line-height: normal;
+    font-size: rem(20px);
+    color: #FFFFFF;
+    text-decoration: none;
+    bottom: rem(-55px);
+    left: rem(711px);
+    z-index:100;
+
+    &:before {
+        position: absolute;
+        top:100%;
+        left:50%;
+        margin: rem(18px) 0 0 rem(-87px);
+        @include size(rem(146px),rem(42px));
+        background: url("#{$rootUrl}welcome-cont-more.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        content: '';
+        display: block;
+    }
+
+    &:after {
+        @include size(rem(756px), rem(444px));
+        background: url("#{$rootUrl}green-shadow.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        position: absolute;
+        top: -200px;
+        left: -430px;
+        content: '';
+        z-index:-1;
+        opacity:0.7;
+    }
+}
