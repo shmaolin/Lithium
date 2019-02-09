@@ -1,0 +1,40 @@
+.form-row__input {
+    height:rem(60px);
+    padding:0 rem(30px);
+    background: #fff;
+    width:100%;
+    color: #000;
+    font-size:rem(18px);
+    font-weight:300;
+    @include placeholder {
+        color: #CBCBCB;
+        font-weight:300;
+    }
+    @include border-radius(rem(2px));
+    border:0;
+    outline: 0;
+}
+
+.form-row__textarea {
+    height:rem(220px);
+    padding:rem(20px) rem(30px);
+    background: #fff;
+    width:100%;
+    color: #000;
+    font-size:rem(18px);
+    font-weight:300;
+    @include placeholder {
+        color: #CBCBCB;
+        font-weight:300;
+        font-family:$Roboto;
+    }
+    @include border-radius(rem(2px));
+    border:0;
+    outline: 0;
+}
+
+.form-row {
+    margin-bottom:rem(20px);
+}
+
+

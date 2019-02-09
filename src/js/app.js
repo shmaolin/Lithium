@@ -24,6 +24,17 @@ $(document).ready(function () {
         $("#overlay-main-filters").fadeOut();
         $(".main-filters__dropdown").removeClass('main-filters__dropdown_active');
     });
+
+    $('.technologies-info__polygon').mouseenter(function () {
+        var active = $(this).data('polygon');
+        $('.technologies-info__item').removeClass('technologies-info__item_active');
+        $(active).addClass('technologies-info__item_active');
+    });
+
+
+    $('.technologies-info__polygon').mouseleave(function () {
+        $('.technologies-info__item').removeClass('technologies-info__item_active');
+    });
 });
 
 

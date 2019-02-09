@@ -1,0 +1,27 @@
+.icon-excavator {
+    @include size(104px,102px);
+    background: url("#{$rootUrl}icon/icon-excavator.svg");
+}
+
+.icon-factory {
+    @include size(117px,102px);
+    background: url("#{$rootUrl}icon/icon-factory.svg");
+}
+
+.icon-battery {
+    @include size(102px,102px);
+    background: url("#{$rootUrl}icon/icon-battery.svg");
+}
+
+.icon-customers {
+    @include size(81px,102px);
+    background: url("#{$rootUrl}icon/icon-customers.svg");
+}
+
+
+[class*="icon-"] {
+    -webkit-background-size:cover;
+    background-size:cover;
+    display: inline-block;
+    vertical-align: top;
+}
