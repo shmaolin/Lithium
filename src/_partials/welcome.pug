@@ -14,7 +14,7 @@
         .welcome__cont-btn-group
           a(href="#").btn-f.btn-f__green Connect with Us
           a(href="#").btn-r.btn-r__green More about partnership
-  .technologies
+  #technologies.technologies
     .main-container
       .technologies__item.technologies__item_1
         .technologies__title
@@ -363,7 +363,7 @@
                   1052.8,566.8 	')
             g
               polygon(class="technologies-info__polygon" data-polygon="#polygon-1" points="360,455.8 656,284.8 672,262.8 699,246.8 710,252.8 986,88.8 1044,115.7 1051,112.2 1057.3,115.3 1057.3,124.3 1069.2,117.2 1110.7,140.2 1100,149 1244.8,231 607,599.8")
-.w-products
+#w-products.w-products
   .main-container
     .flex-row
       .w-products__item.w-products__item_1
@@ -373,7 +373,7 @@
           .w-products__text
             p Purification of Lithium Carbonate from Industrial Grade into Battery Grade.
             p LiTech can process Lithium Carbonate of purity 96% - 99,3
-            a(href="#").btn-r.btn-r__green.w-products__btn More about partnership
+            a(href="#receip-scheme-2").btn-r.btn-r__green.btn-modal.w-products__btn Receipt scheme
           .w-products__img.w-products__img_1
       .w-products__item.w-products__item_2
         .w-products__title Lithium Carbonate
@@ -382,9 +382,54 @@
           .w-products__text
             p Lithium Hydroxide of Battery Grade.
             p On the basis of CMP technology LiTech produces LiOH Battery Grade to export LiOH to the battery market around the world.
-            a(href="#").btn-r.btn-r__green.w-products__btn More about partnership
+            a(href="#receip-scheme").btn-r.btn-r__green.btn-modal.w-products__btn Receipt scheme
           .w-products__img.w-products__img_2
-
-
-
-
+#receip-scheme-2.p-modal.p-modal__right
+  a(href="#").p-modal__close
+  .p-modal__body.mCustomScrollbar(data-mcs-theme="dark")
+    .p-modal__title Receipt scheme
+    .structure-group
+      .flex-row
+        .col-auto.mr-auto
+          .structure
+            .structure__item dissolution
+              span.structure__info.structure__info_left Li
+                small 2
+                | CO
+                small 3
+              span.structure__info.structure__info_right H
+                small 2
+                | O
+            .structure__item filtration
+            .structure__item magnetic separation
+            .structure__item cristallization
+            .structure__item centrifuging
+            .structure__item.structure__info-arrow drying
+        .col-auto
+          .structure.structure__right
+            .structure__item micronizing
+            .structure__item screen sizing
+            .structure__item magnetic separation
+            .structure__finish-item Li2CO3  BG
+#receip-scheme.p-modal.p-modal__left
+  a(href="#").p-modal__close
+  .p-modal__body.mCustomScrollbar(data-mcs-theme="dark")
+    .p-modal__title Receipt scheme
+    .structure
+      .structure__item dissolution
+        span.structure__info.structure__info_left Li
+          small 2
+          |CO
+          small 3
+        span.structure__info.structure__info_right H
+          small 2
+          |O
+      .structure__item bicarbonization
+        span.structure__info-left CO
+          small 2
+      .structure__item filtration
+      .structure__item decarbonization
+      .structure__item centrifuging
+      .structure__item drying
+      .structure__item magnetic separation
+      .structure__finish-item Li2CO3  BG

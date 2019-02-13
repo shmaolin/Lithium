@@ -341,4 +341,219 @@
 
 .w-products__btn {
     margin: rem(27px) 0 0;
+    min-width: rem(220px);
+}
+
+.p-modal {
+    position: fixed;
+    top:0;
+    z-index:1000;
+    background: #fff;
+    @include transition(0.5s all ease);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.p-modal__close {
+    position: absolute;
+    @include size(rem(26px),rem(25px));
+    background: url("#{$rootUrl}close.svg") no-repeat center;
+    -webkit-background-size:cover;
+    background-size:cover;
+    top:rem(29px);
+    display: block;
+    z-index:100;
+    cursor: pointer;
+    right:rem(28px);
+}
+
+.p-modal__left {
+    height:100%;
+    width:960px;
+    @include transform(translate(-150%,0));
+    left:0;
+}
+
+.p-modal__right {
+    height:100%;
+    width:960px;
+    @include transform(translate(150%,0));
+    right:0;
+}
+
+.p-modal_active {
+    &.p-modal__left {
+        opacity: 1;
+        visibility: visible;
+        @include transform(translate(0,0));
+    }
+
+    &.p-modal__right {
+        opacity: 1;
+        visibility: visible;
+        @include transform(translate(0,0));
+    }
+}
+
+.p-modal__left-active {
+    opacity: 1;
+    visibility: visible;
+    @include transform(translate(0,0));
+}
+
+#overlay {
+    background: rgba(#000,0.3);
+    @include square(100%);
+    z-index:900;
+    position: fixed;
+    display: none;
+}
+
+.p-modal__body {
+    overflow: auto;
+    height:100%;
+}
+
+.p-modal__title  {
+    font-weight: 500;
+    line-height: rem(32px);
+    font-size: rem(24px);
+    text-align: center;
+    color: #333333;
+    margin:rem(111px) 0 0;
+}
+
+.structure-group {
+    max-width: rem(587px);
+    margin:auto;
+    padding-bottom: rem(20px);
+}
+
+.structure {
+    margin: rem(112px) 0 rem(15px);
+    position: relative;
+}
+
+.structure__right {
+    margin: rem(182px) 0 0;
+}
+
+.structure__item {
+    @include size(rem(220px),rem(50px));
+    line-height:rem(50px);
+    text-align: center;
+    background: #EDF0F0;
+    @include border-radius(rem(10px));
+    position: relative;
+    font-size: rem(16px);
+    color: #232323;
+    margin:0 auto rem(30px);
+    @include transition(0.3s all ease);
+
+    &:before {
+        @include size(rem(8px), rem(20px));
+        background: url("#{$rootUrl}arrow-down.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        position: absolute;
+        top:100%;
+        left:50%;
+        margin-left:rem(-4px);
+        margin-top: rem(6px);
+        content: '';
+    }
+
+    &:hover {
+        background: #6FDE74;
+        color: #fff;
+    }
+}
+
+.structure__info {
+    display: inline-block;
+    vertical-align: top;
+    font-size: rem(18px);
+    text-align: center;
+    color: #232323;
+    width:50%;
+    top:rem(-66px);
+    position: absolute;
+    line-height:1;
+
+    &:before {
+        position: absolute;
+        left:50%;
+        top:100%;
+        margin:rem(6px) 0 0 rem(-4px);
+        @include size(rem(8px),rem(27px));
+        background: url("#{$rootUrl}arrow-down2.svg");
+        -webkit-background-size:cover;
+        background-size:cover;
+        content: '';
+    }
+}
+
+.structure__info-left {
+    display: inline-block;
+    vertical-align: top;
+    font-size: rem(18px);
+    text-align: center;
+    color: #232323;
+    width:50%;
+    top:rem(-146px);
+    left:100%;
+    position: absolute;
+    line-height:1;
+    margin: 0 0 0 rem(-11px);
+
+    &:before {
+        @include size(rem(35px),rem(152px));
+        background: url("#{$rootUrl}arrow-l-large.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        display: block;
+        content: '';
+        top:100%;
+        left:0;
+        position: absolute;
+        margin: rem(6px) 0 0 rem(20px);
+    }
+}
+
+.structure__info-arrow {
+    &:before {
+        display: none;
+    }
+
+    &:after {
+        @include size(rem(371px),rem(438px));
+        background: url("#{$rootUrl}arrow-structure.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        position: absolute;
+        bottom:0;
+        left:100%;
+        content: '';
+        margin: 0 0 rem(-36px) rem(-111px);
+    }
+}
+
+.structure__info_left {
+    left:0;
+}
+
+.structure__info_right {
+    right:0;
+}
+
+.structure__finish-item {
+    background: #6FDE74;
+    @include border-radius(rem(10px));
+    @include size(rem(220px),rem(77px));
+    color: #fff;
+    text-align: center;
+    line-height:rem(77px);
+    font-weight: 500;
+    font-size: rem(20px);
+    margin:auto;
 }

@@ -1,17 +1,21 @@
-header#header.header__fixed
-  .main-container
-    .flex-row
+header#header(class=(active_page === 'main' ? 'header__fixed': ''))
+  .main-container.flex-row
       .col-auto.mr-auto
         a(href="#").header__logo
       .col
         .header__nav
           .header__nav-item
-            a(href="#").header__nav-link.header__nav-link_active Technologies
+            a(href="index.html" class=(active_page === 'main' ? 'header__nav-link header__nav-link_active': 'header__nav-link')) Technologies
           .header__nav-item
-            a(href="#").header__nav-link About
+            a(href="about.html" class=(active_page === 'about' ? 'header__nav-link header__nav-link_active': 'header__nav-link')) About
           .header__nav-item
-            a(href="#").header__nav-link Products
+            a(href="products.html" class=(active_page === 'products' ? 'header__nav-link header__nav-link_active': 'header__nav-link')) Products
           .header__nav-item
-            a(href="#").header__nav-link Contacts
+            a(href="contacts.html" class=(active_page === 'contacts' ? 'header__nav-link header__nav-link_active': 'header__nav-link')) Contacts
       .col-auto
         a(href="#").header__cmp
+
+
+
+
+

@@ -29,6 +29,10 @@
     font-size: rem(14px);
     text-decoration: none;
     outline:0;
+    
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__lang {

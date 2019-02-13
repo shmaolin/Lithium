@@ -3,7 +3,7 @@
     top:0;
     bottom:0;
     width: rem(161px);
-    background: rgba(#1A1A1A,0.2);
+    background: rgba(#1A1A1A,0.4);
     z-index:450;
 }
 
@@ -15,7 +15,7 @@
     font-weight: 300;
     line-height: 1;
     font-size: rem(14px);
-    color: #FFFFFF;
+    color: #fff;
     padding: 0 rem(26px);
 }
 
@@ -30,7 +30,7 @@
         left:0;
         height:auto;
         width:1px;
-        background: #ccc;
+        background: #fff;
         display: block;
         content: '';
     }
@@ -39,22 +39,29 @@
 .page-nav__list-item {
     height:rem(47px);
     position: relative;
-    font-size: rem(14px);
-    color: #CCCCCC;
-    padding:0 0 0 18px;
-    @include transition(0.3s all ease);
 
-    &:before {
-        background: #CBCBCB;
+    span {
         display: block;
-        content: '';
+        position: relative;
+        font-size: rem(14px);
+        color: #fff;
+        padding:0 0 0 18px;
         @include transition(0.3s all ease);
-        @include square(rem(9px));
-        @include border-radius(100%);
-        position: absolute;
-        top: rem(5px);
-        left: rem(-4px);
+        cursor: pointer;
+
+        &:before {
+            background: #fff;
+            display: block;
+            content: '';
+            @include transition(0.3s all ease);
+            @include square(rem(9px));
+            @include border-radius(100%);
+            position: absolute;
+            top: rem(5px);
+            left: rem(-4px);
+        }
     }
+
 
     &:last-child {
         height:auto;
@@ -64,8 +71,10 @@
 .page-nav__list-item_active {
     color: #6DEC73;
 
-    &:before {
-        background: #6DEC73;
-        @include box-shadow(0 0 6px 1px #6DEC73);
+    span {
+        &:before {
+            background: #6DEC73;
+            @include box-shadow(0 0 6px 1px #6DEC73);
+        }
     }
 }

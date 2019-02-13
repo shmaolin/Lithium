@@ -30,9 +30,8 @@ var paths = {
 
 var scripts_array = [
     './src/js/jquery-3.3.1.min.js',
-    './src/js/jquery.formstyler.js',
     './src/js/slick.min.js',
-    './src/js/parallax.js',
+    './src/js/jquery.mCustomScrollbar.js',
     './src/js/app.js'
 ];
 
