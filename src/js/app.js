@@ -62,8 +62,16 @@ $(document).ready(function () {
             stepTo = $(step).offset(),
             headerHeight = $('#header').outerHeight(),
             x =parseInt(stepTo.top - headerHeight);
+        $('html,body').stop().animate({scrollTop:x}, 500);
+    });
 
-        console.log(step);
+    $('.go-to').click(function (e) {
+        e.preventDefault();
+
+        var step = $(this).attr('href'),
+            stepTo = $(step).offset(),
+            headerHeight = $('#header').outerHeight(),
+            x =parseInt(stepTo.top - headerHeight);
 
         $('html,body').stop().animate({scrollTop:x}, 500);
     });

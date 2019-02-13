@@ -29,6 +29,7 @@
     background-position:center;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
+    background-color: #e5e5e5;
     background-size:cover;
     @include border-radius(rem(10px));
 }
