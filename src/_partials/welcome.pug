@@ -2,10 +2,6 @@
   .welcome__cont
     .main-container
       .welcome__cont-img
-      .welcome__cont-more Learn more
-        br
-        | about production
-
       .welcome__inner
         h1.welcome__title!="Lithium technologies produces <br> lithium value chain"
         .welcome__cont-text
@@ -14,6 +10,8 @@
         .welcome__cont-btn-group
           a(href="#feedback").btn-f.btn-f__green.go-to Connect with Us
           a(href="#partnership").btn-r.btn-r__green.go-to More about partnership
+      .welcome__cont-more Learn more
+        span about production
   #technologies.technologies
     .main-container
       .technologies__item.technologies__item_1
@@ -25,6 +23,7 @@
           p We have 2 productions lines:
           p Concentrator: production of lithium concentrate from ore
           p Converter: production of lithium carbonate and lithium hydroxide from lithium concentrate.
+        .technologies__img.technologies__img_1
       .technologies__item.technologies__item_2
         .technologies__title
           span Converter:
@@ -35,6 +34,7 @@
           p Converter: production of lithium carbonate and lithium hydroxide from lithium concentrate.
           p Micronized Lithium Hydroxide and Lithium Carbonate.
           p CMP can produce lithium hydroxide and lithium carbonate with particle distribution D50: µm 6-50.
+        .technologies__img.technologies__img_2
       .technologies-info
         svg(version="1.1" x="0px" y="0px" viewBox="0 0 1591 2100" style="enable-background:new 0 0 1591 2073.8;" xml:space="preserve").technologies-info__svg
           g
@@ -365,7 +365,7 @@
               polygon(class="technologies-info__polygon" data-polygon="#polygon-1" points="360,455.8 656,284.8 672,262.8 699,246.8 710,252.8 986,88.8 1044,115.7 1051,112.2 1057.3,115.3 1057.3,124.3 1069.2,117.2 1110.7,140.2 1100,149 1244.8,231 607,599.8")
 #w-products.w-products
   .main-container
-    .flex-row
+    .w-products__slider.flex-row
       .w-products__item.w-products__item_1
         .w-products__title Lithium Carbonate
         .w-products__sub-title Battery Grade
@@ -373,8 +373,9 @@
           .w-products__text
             p Purification of Lithium Carbonate from Industrial Grade into Battery Grade.
             p LiTech can process Lithium Carbonate of purity 96% - 99,3
+            .w-products__img.w-products__img_1
             a(href="#receip-scheme-2").btn-r.btn-r__green.btn-modal.w-products__btn Receipt scheme
-          .w-products__img.w-products__img_1
+
       .w-products__item.w-products__item_2
         .w-products__title Lithium Carbonate
         .w-products__sub-title Battery Grade
@@ -382,8 +383,9 @@
           .w-products__text
             p Lithium Hydroxide of Battery Grade.
             p On the basis of CMP technology LiTech produces LiOH Battery Grade to export LiOH to the battery market around the world.
+            .w-products__img.w-products__img_2
             a(href="#receip-scheme").btn-r.btn-r__green.btn-modal.w-products__btn Receipt scheme
-          .w-products__img.w-products__img_2
+
 #receip-scheme-2.p-modal.p-modal__right
   a(href="#").p-modal__close
   .p-modal__body.mCustomScrollbar(data-mcs-theme="dark")

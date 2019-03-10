@@ -11,58 +11,172 @@
     }
 
     .main-container {
-        max-width: 1601px;
+        max-width: rem(1601px);
     }
 }
 
-.header__logo {
-    display: inline-block;
-    vertical-align: top;
-    @include size(rem(201px),rem(59px));
-    background: url("#{$rootUrl}logo.svg") no-repeat center;
-    -webkit-background-size:cover;
-    background-size:cover;
-    margin: rem(25px) 0 0;
-}
+.header {
+    &__logo {
+        display: inline-block;
+        vertical-align: top;
+        @include size(rem(201px),rem(59px));
+        background: url("#{$rootUrl}logo.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        margin: rem(25px) 0 0;
+    }
 
-.header__cmp {
-    display: inline-block;
-    vertical-align: top;
-    @include size(rem(100px),rem(29px));
-    background: url("#{$rootUrl}cmp.svg") no-repeat center;
-    -webkit-background-size:cover;
-    background-size:cover;
-    margin: rem(35px) rem(105px) 0 0;
-}
+    &__cmp {
+        display: inline-block;
+        vertical-align: top;
+        @include size(rem(100px),rem(29px));
+        background: url("#{$rootUrl}cmp.svg") no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        margin: rem(35px) rem(105px) 0 0;
+    }
 
-.header__nav {
-    text-align: center;
-    margin: rem(38px) 0 0;
-}
+    &__nav {
+        text-align: center;
+        margin: rem(38px) 0 0;
 
-.header__nav-item {
-    display: inline-block;
-    vertical-align: top;
-    margin-left:rem(50px);
+        &-item {
+            display: inline-block;
+            vertical-align: top;
+            margin-left:rem(50px);
 
-    &:first-child {
-        margin-left:0;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            font-size: rem(18px);
+            text-align: center;
+            color: #FFFFFF;
+            @include transition(0.3s all ease);
+            font-weight:300;
+
+            &:hover,
+            &_active {
+                color: #6DEC73;
+            }
+        }
     }
 }
 
-.header__nav-link {
-    text-decoration: none;
-    font-size: rem(18px);
-    text-align: center;
-    color: #FFFFFF;
-    @include transition(0.3s all ease);
-    font-weight:300;
-    
-    &:hover {
-        color: #6DEC73;
+#btn-mob {
+    display: none;
+}
+
+
+@media(max-width: 1200px) {
+    #header {
+        height:rem(80px);
+    }
+    .header {
+        &__logo {
+            margin: rem(10px) 0 0;
+        }
+
+        &__cmp {
+            margin: rem(25px) rem(15px) 0 0;
+        }
+
+        &__nav {
+            margin: rem(25px) 0 0;
+        }
     }
 }
 
-.header__nav-link_active {
-    color: #6DEC73;
+
+@media(max-width: 992px) {
+    #btn-mob {
+        display: inline-block;
+        vertical-align: top;
+        margin: 30px 0 0;
+
+        span {
+            display: block;
+            @include size(34px,4px);
+            @include transition(0.3s all ease);
+            position: relative;
+            background: #fff;
+            margin: 5px 0 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &.btn-mob {
+            &_active {
+                span {
+                    &:nth-child(1) {
+                        @include rotate(45deg);
+                        top: 9px;
+                    }
+
+                    &:nth-child(2) {
+                        @include transform(translate(-100%,0));
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &:nth-child(3) {
+                        @include rotate(-45deg);
+                        top: -9px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .header {
+        &__cmp {
+            display: none;
+        }
+
+        &__nav {
+            position: absolute;
+            margin: 0;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            @include transform(translate(-100%,0));
+            @include transition(0.3s all ease);
+
+            &_active {
+                opacity: 1;
+                visibility: visible;
+                @include transform(translate(0,0));
+            }
+
+            &-item {
+                display: block;
+                margin: 0;
+                &:not(:first-child) {
+                    border-top: 1px solid #eee;
+                }
+            }
+
+            &-link {
+                display: block;
+                padding: 21px 15px;
+                background: #fff;
+                color: #000;
+                text-align: center;
+
+                &:hover ,
+                &_active {
+                    background: #6FDE74;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }

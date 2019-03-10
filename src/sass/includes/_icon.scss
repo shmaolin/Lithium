@@ -25,3 +25,23 @@
     display: inline-block;
     vertical-align: top;
 }
+
+@media(max-width: 568px) {
+    $size: 0.5;
+
+    .icon-excavator {
+        @include size(round(104px*$size),round(102px*$size));
+    }
+
+    .icon-factory {
+        @include size(round(117px*$size),round(102px*$size));
+    }
+
+    .icon-battery {
+        @include size(round(102px*$size),round(102px*$size));
+    }
+
+    .icon-customers {
+        @include size(round(81px*$size),round(102px*$size));
+    }
+}

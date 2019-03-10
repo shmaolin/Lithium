@@ -1,40 +1,80 @@
-.form-row__input {
-    height:rem(60px);
-    padding:0 rem(30px);
-    background: #fff;
-    width:100%;
-    color: #000;
-    font-size:rem(18px);
-    font-weight:300;
-    @include placeholder {
-        color: #CBCBCB;
-        font-weight:300;
-    }
-    @include border-radius(rem(2px));
-    border:0;
-    outline: 0;
-}
-
-.form-row__textarea {
-    height:rem(220px);
-    padding:rem(20px) rem(30px);
-    background: #fff;
-    width:100%;
-    color: #000;
-    font-size:rem(18px);
-    font-weight:300;
-    @include placeholder {
-        color: #CBCBCB;
-        font-weight:300;
-        font-family:$Roboto;
-    }
-    @include border-radius(rem(2px));
-    border:0;
-    outline: 0;
-}
-
 .form-row {
     margin-bottom:rem(20px);
+
+    &__input {
+        height:rem(60px);
+        padding:0 rem(30px);
+        background: #fff;
+        width:100%;
+        color: #000;
+        font-size:rem(18px);
+        font-weight:300;
+        @include placeholder {
+            color: #CBCBCB;
+            font-weight:300;
+        }
+        @include border-radius(rem(2px));
+        border:0;
+        outline: 0;
+    }
+
+    &__textarea {
+        height:rem(220px);
+        padding:rem(20px) rem(30px);
+        background: #fff;
+        width:100%;
+        color: #000;
+        font-size:rem(18px);
+        font-weight:300;
+        @include placeholder {
+            color: #CBCBCB;
+            font-weight:300;
+            font-family:$Roboto;
+        }
+        @include border-radius(rem(2px));
+        border:0;
+        outline: 0;
+    }
 }
 
+@media(max-width: 1400px) {
+    $size: 0.8;
+
+    .form-row {
+        margin-bottom:rem(round(20px*$size));
+
+        &__input {
+            height:rem(round(60px*$size));
+            padding:0 rem(round(30px*$size));
+            font-size:rem(round(18px*$size));
+        }
+
+        &__textarea {
+            height:rem(round(220px*$size));
+            padding:rem(round(20px*$size)) rem(round(30px*$size));
+            font-size:rem(round(18px*$size));
+        }
+    }
+}
+
+
+@media(max-width: 568px) {
+    $size: 0.7;
+
+    .form-row {
+        margin-bottom:rem(round(20px*$size));
+
+        &__input {
+            height:rem(round(60px*$size));
+            padding:0 rem(round(30px*$size));
+            font-size:rem(round(18px*$size));
+        }
+
+        &__textarea {
+            height:rem(round(220px*$size));
+            padding:rem(round(20px*$size)) rem(round(30px*$size));
+            font-size:rem(round(18px*$size));
+        }
+    }
+}
 
