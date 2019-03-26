@@ -9,6 +9,8 @@
     @include border-radius(rem(60px));
     text-decoration: none;
     font-size:rem(16px);
+    border: 0;
+    outline: 0!important;
 
     &__green {
         background: #6AD26F;
@@ -66,19 +68,19 @@
 }
 
 
-@media(max-width: 568px) {
-    $size:0.9;
-
-    .btn-f {
-        height:rem(round(60px*$size));
-        line-height:rem(round(60px*$size));
-        @include border-radius(rem(round(60px*$size)));
-    }
-
-
-    .btn-r {
-        height:rem(round(60px*$size));
-        line-height:rem(round(54px*$size));
-        @include border-radius(rem(round(60px*$size)));
-    }
-}
+//@media(max-width: 568px) {
+//    $size:0.9;
+//
+//    .btn-f {
+//        height:rem(round(60px*$size));
+//        line-height:rem(round(60px*$size));
+//        @include border-radius(rem(round(60px*$size)));
+//    }
+//
+//
+//    .btn-r {
+//        height:rem(round(60px*$size));
+//        line-height:rem(round(54px*$size));
+//        @include border-radius(rem(round(60px*$size)));
+//    }
+//}

@@ -82,6 +82,7 @@
 @media(max-width: 1400px) {
     .page-nav {
         width: rem(100px);
+        display: none;
 
         &__cont {
             padding: rem(130px) 0 0;
@@ -97,8 +98,3 @@
     }
 }
 
-@media(max-width: 1200px) {
-    .page-nav {
-        display: none;
-    }
-}

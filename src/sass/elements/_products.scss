@@ -19,6 +19,7 @@
             @include border-radius(rem(10px));
             min-height: rem(500px);
             padding: rem(33px) rem(24px);
+            height: 100%;
         }
 
         &__title {
@@ -110,7 +111,7 @@
 
             &__img {
                 position: absolute;
-                top: rem(3px);
+                top: rem(-10px);
                 left: 0;
                 width:rem(95px);
                 margin: 0;
@@ -140,5 +141,12 @@
                 }
             }
         }
+    }
+}
+
+
+@media(max-width: 440px) {
+    .products-list__img {
+        top: rem(3px);
     }
 }

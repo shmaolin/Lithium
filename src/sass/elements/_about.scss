@@ -6,7 +6,7 @@
     }
 
     &-slider {
-        width:rem(370px);
+        width:rem(570px);
         max-width: 100%;
         margin:rem(76px) auto 0;
 
@@ -24,7 +24,7 @@
             li {
                 display: inline-block;
                 vertical-align: top;
-                margin-left:rem(8px);
+                margin-left:rem(5px);
 
                 &:first-child {
                     margin-left:0;
@@ -32,7 +32,7 @@
 
                 &.slick-active {
                     button {
-                        background: #6AD26F;
+                        background: #ccc;
                     }
                 }
             }
@@ -40,18 +40,18 @@
             button {
                 padding:0;
                 overflow: hidden;
-                @include square(rem(16px));
+                @include square(rem(9px));
                 margin:0;
                 outline: 0;
                 text-indent: -999px;
                 @include border-radius(100%);
-                background: transparent;
+                background: #fff;
                 @include transition(0.3s all ease);
-                border: 1px solid #6AD26F;
+                border: 0;
                 cursor: pointer;
 
                 &:hover {
-                    background: #6AD26F;
+                    background: #ccc;
                 }
             }
         }
@@ -61,12 +61,17 @@
         }
 
         &__img {
-            height:rem(247px);
+            height:rem(380px);
             display: block;
             background-position: center;
             -webkit-background-size:cover;
             background-size:cover;
             @include border-radius(rem(15px));
+
+            img {
+                display: block;
+                width: 100%;
+            }
         }
     }
 }
@@ -114,6 +119,13 @@
             display: block;
         }
     }
+}
+
+@media(max-width: 568px) {
+  .about-slider__img {
+    height: 270px;
+    border-radius: 10px;
+  }
 }
 
 @media(max-width: 360px) {

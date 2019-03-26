@@ -62,6 +62,7 @@
             bottom: rem(-55px);
             left: rem(711px);
             z-index:100;
+            cursor: pointer;
 
             span {
                 display: block;
@@ -73,11 +74,13 @@
                 left:50%;
                 margin: rem(18px) 0 0 rem(-87px);
                 @include size(rem(146px),rem(42px));
+                @include transition(0.3s all ease);
                 background: url("#{$rootUrl}welcome-cont-more.svg") no-repeat center;
                 -webkit-background-size:cover;
                 background-size:cover;
                 content: '';
                 display: block;
+                animation:jump 2s infinite;
             }
 
             &:after {
@@ -88,9 +91,16 @@
                 position: absolute;
                 top: rem(-200px);
                 left: rem(-430px);
+                @include transition(0.3s all ease);
                 content: '';
                 z-index:-1;
+                opacity:0.5;
+            }
+
+            &:hover {
+              &:after {
                 opacity:0.7;
+              }
             }
         }
     }
@@ -107,6 +117,10 @@
         font-size: rem(56px);
         color: #FFFFFF;
         margin:0;
+
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -276,6 +290,16 @@
     }
 }
 
+@keyframes jump {
+  0 , 100% {
+    transform: translate(0,0);
+  }
+
+  50% {
+    transform: translate(0,10px);
+  }
+}
+
 .w-products {
     background: #F5F5F5;
     padding: rem(50px) 0 rem(204px);
@@ -307,14 +331,12 @@
         background-position: center;
 
         &_1 {
-            background-image: url("#{$rootUrl}w-products-1.png");
             @include size(rem(583px),rem(313px));
             top: rem(-89px);
             right: rem(-109px);
         }
 
         &_2 {
-            background-image: url("#{$rootUrl}w-products-2.png");
             @include size(rem(583px),rem(313px));
             top: rem(-77px);
             right: rem(-163px);
@@ -573,7 +595,7 @@
     $size: 0.8;
     .welcome {
         &__inner {
-            padding-top: rem(185px);
+            padding-top: rem(80px);
         }
 
         &__cont {
@@ -583,7 +605,7 @@
 
             &-img {
                 @include size(rem(round(1920px*$size)),rem(round(819px*$size)));
-                top:rem(round(139px*$size));
+                top:rem(round(30px));
                 margin:0 0 0 rem(round(-960px*$size));
             }
 
@@ -604,7 +626,7 @@
 
             &-more {
                 font-size: rem(round(20px*$size));
-                bottom: rem(round(-55px*$size));
+                bottom: rem(15px);
                 left: rem(680px);
 
                 &:before {
@@ -799,11 +821,19 @@
 @media(max-width: 1200px) {
     .welcome {
         &__inner {
-            padding: 130px 0 0 15px;
+            padding: 50px 0 0 15px;
         }
 
         &__title {
             font-size: rem(40px);
+        }
+
+        &__cont-img {
+            top: -30px;
+        }
+
+        &__cont-more {
+            bottom: 70px;
         }
     }
 
@@ -954,16 +984,23 @@
             background-repeat: no-repeat;
             -webkit-background-size: auto 100%;
             background-size:  auto 100%;
-            margin: rem(25px) rem(-15px) 0;
+            margin: rem(25px) 0 0;
+            position: relative;
+            @include transform(translate(-50%,0));
+            left: 50%;
 
             &_1 {
                 background-image: url("#{$rootUrl}technologies-img-1.png");
                 height: rem(348px);
+                width: rem(503px);
+                margin-left: -15px;
             }
 
             &_2 {
                 background-image: url("#{$rootUrl}technologies-img-2.png");
                 height: rem(421px);
+                width: rem(495px);
+                margin-left: -35px;
             }
         }
     }
@@ -1004,6 +1041,7 @@
         &__inner {
             padding-left: 0;
             padding-right: 0;
+            padding-top: rem(60px);
         }
         &__cont-img {
             display: none;
@@ -1197,6 +1235,24 @@
             @include size(rem(110px),rem(round(77px*$size)));
             line-height:rem(round(77px*$size));
             font-size: rem(round(20px*$size));
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .technologies {
+        &__img {
+            &_1 {
+                height: rem(208px);
+                width: rem(300px);
+                margin-left: rem(2px);
+            }
+
+            &_2 {
+                height: rem(255px);
+                width: rem(300px);
+                margin-left: 0;
+            }
         }
     }
 }

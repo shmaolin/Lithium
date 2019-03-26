@@ -40,6 +40,42 @@
         text-align: center;
         margin: rem(38px) 0 0;
 
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                vertical-align: top;
+                margin-left:rem(50px);
+
+                &:first-child {
+                    margin-left:0;
+                }
+
+                &.current-menu-item {
+                    a {
+                        color: #6DEC73;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: rem(18px);
+                    text-align: center;
+                    color: #FFFFFF;
+                    @include transition(0.3s all ease);
+                    font-weight:300;
+
+                    &:hover,
+                    &_active {
+                        color: #6DEC73;
+                    }
+                }
+            }
+        }
+
         &-item {
             display: inline-block;
             vertical-align: top;
@@ -70,6 +106,15 @@
     display: none;
 }
 
+@media(max-width: 1400px) {
+    #header {
+        &.header__fixed {
+            position: static;
+            top:auto;
+            left:auto;
+        }
+    }
+}
 
 @media(max-width: 1200px) {
     #header {
@@ -149,11 +194,42 @@
             visibility: hidden;
             @include transform(translate(-100%,0));
             @include transition(0.3s all ease);
+            z-index:500;
 
             &_active {
                 opacity: 1;
                 visibility: visible;
                 @include transform(translate(0,0));
+            }
+
+            ul {
+                li {
+                    display: block;
+                    margin: 0;
+                    &:not(:first-child) {
+                        border-top: 1px solid #eee;
+                    }
+
+                    &.current_page_item {
+                        a {
+                            background: #6FDE74;
+                            color: #fff;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        padding: 21px 15px;
+                        background: #fff;
+                        color: #000;
+                        text-align: center;
+
+                        &:hover {
+                            background: #6FDE74;
+                            color: #fff;
+                        }
+                    }
+                }
             }
 
             &-item {
