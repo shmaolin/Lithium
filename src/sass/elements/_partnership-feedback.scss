@@ -82,7 +82,7 @@
     }
 
     &__form {
-        max-width: rem(800px);
+        max-width: rem(630px);
         padding-left:rem(15px);
         padding-right:rem(15px);
         margin:rem(86px) auto 0;
@@ -106,9 +106,9 @@
         padding:rem(round(122px*$size)) 0 0;
 
         &__text {
-            padding:0 rem(round(15px*$size));
-            max-width:rem(round(630px*$size));
             margin:rem(round(22px*$size)) auto 0;
+            padding: 0;
+            max-width: rem(600px);
 
             p {
                 margin:0 0 rem(round(7px*$size));
@@ -149,15 +149,13 @@
         margin: rem(150px) 0 0;
 
         &__form {
-            max-width: rem(round(800px*$size));
-            padding-left:rem(round(15px*$size));
-            padding-right:rem(round(15px*$size));
+            max-width: rem(600px);
             margin:rem(round(86px*$size)) auto 0;
+            padding: 0;
         }
 
         &__form-submit {
             margin:rem(round(43px*$size)) 0 0;
-            width:rem(round(220px*$size));
         }
     }
 }
@@ -248,3 +246,4 @@
         }
     }
 }
+

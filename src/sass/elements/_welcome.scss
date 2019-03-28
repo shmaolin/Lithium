@@ -619,7 +619,6 @@
 
                 .btn-f,
                 .btn-r {
-                    min-width:rem(round(220px*$size));
                     margin-right:rem(round(31px*$size));
                 }
             }
@@ -729,7 +728,6 @@
 
         &__btn {
             margin: rem(round(27px*$size)) 0 0;
-            min-width: rem(round(220px*$size));
         }
     }
 
@@ -905,7 +903,6 @@
 
                 .btn-f,
                 .btn-r {
-                    min-width:rem(round(220px*$size));
                     margin-right:rem(round(31px*$size));
                 }
             }
@@ -953,6 +950,11 @@
             margin-top: 30px;
         }
     }
+
+    .w-products__btn {
+        min-width: 176px;
+    }
+
 }
 
 @media(max-width: 900px) {
